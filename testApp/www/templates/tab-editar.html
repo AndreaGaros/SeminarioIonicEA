@@ -1,0 +1,19 @@
+<ion-view <ion-view cache-view="false" view-title="{{newPersona.nombre}}">
+
+  <ion-content class="padding">
+    <form name="myForm">
+      <div class="form-group">
+
+        <input type="text" class="form-control input-lg text-center" placeholder="Nombre" ng-model="edited.nombre" required>
+        <br>
+        <input type="text" class="form-control input-lg text-center" placeholder="Apellido" ng-model="edited.apellido" required>
+        <br>
+        <input type="text" class="form-control input-lg text-center" placeholder="Edad" ng-model="edited.edad" required>
+      </div>
+    </form>
+
+    <button type="submit" class="button button-block button-balanced" ng-click="modificarPersona(newPersona)" ng-disabled="myForm.$invalid || selected">Modificar</button>
+    <!--ng-disabled="!newPersona.nombre || !newPersona.apellido || !newPersona.edad || !selected"-->
+
+  </ion-content>
+</ion-view>

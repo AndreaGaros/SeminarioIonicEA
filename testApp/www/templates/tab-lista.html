@@ -1,0 +1,17 @@
+<ion-view view-title cache-view="false" ="lista" >
+  <!--cache-view="false"-->
+
+  <ion-content ng-controller="listaCtrl">
+    <ion-list>
+      <ion-item ng-repeat="persona in personas" ng-click="selectPerson(persona)">
+        {{persona.nombre}},{{persona.apellido}},{{persona.edad}}
+      </ion-item>
+    </ion-list>
+    <button type="submit" class="button button-block button-assertive" ng-click="borrarPersona(newPersona)" ng-disabled="!newPersona.nombre || !newPersona.apellido || !newPersona.edad || !selected">Borrar</button>
+    <button type="submit" class="button button-block button-balanced" ng-click="modify()"ng-disabled="!newPersona.nombre || !newPersona.apellido || !newPersona.edad || !selected" >Modificar</button>
+
+  </ion-content>
+
+</ion-view>
+
+
